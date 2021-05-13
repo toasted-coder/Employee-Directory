@@ -61,6 +61,33 @@ class App extends React.Component {
       sortedLastName: sortedLastName,
     });
   };
+
+  render() {
+    let Display;
+
+    if (this.state.filteredEmployees) {
+      Display = this.state.filteredEmployees;
+    } else {
+      Display = this.state.employeeList;
+    }
+
+    return (
+      <>
+        <div className="App">
+          <searchForm
+            search={this.state.search}
+            handleInputChange={this.handleInputChange}
+            handleFormSubmit={this.handleFormSubmit}
+            handleSortLastName={this.handleSortLastName}
+          />
+        </div>
+
+        <div>
+          <resultsList results={Display} />
+        </div>
+      </>
+    );
+  }
 }
 
 export default App;
