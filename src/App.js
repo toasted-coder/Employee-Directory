@@ -37,6 +37,16 @@ class App extends React.Component {
 
   handleFormSubmit = (event) => {
     event.preventDefault();
+    const filteredEmployees = this.state.employeeList.filter((employee) => {
+      return employee.name.last.includes(this.state.search);
+    });
+    this.setState({
+      filteredEmployees: filteredEmployees,
+    });
+  };
+
+  handleSortLastName = (event) => {
+    event.preventDefault();
     console.log(this.state.employeeList);
     const sortedLastName = this.state.employeeList.sort((a, b) => {
       if (a.name.last > b.name.last) {
