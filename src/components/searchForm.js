@@ -1,6 +1,6 @@
 import React from "react";
 
-function searchForm(props) {
+function SearchForm(props) {
   return (
     <form>
       <div className="form-group">
@@ -16,14 +16,14 @@ function searchForm(props) {
         />
         <button
           onClick={props.handleFormSubmit}
-          className="btn btn-success mt-3"
+          className="btn btn-success mt-4"
         >
           Search
         </button>{" "}
         <br />
         <button
           onClick={props.handleSortLastName}
-          className="btn btn-primary mt-3"
+          className="btn btn-primary mt-4"
         >
           Sort by last name
         </button>{" "}
@@ -33,4 +33,4 @@ function searchForm(props) {
   );
 }
 
-export default searchForm;
+export default SearchForm;

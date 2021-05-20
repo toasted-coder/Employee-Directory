@@ -1,8 +1,8 @@
 import React from "react";
 import API from "./utils/API";
 import "./App.css";
-import resultsList from "./components/resultsList";
-import searchForm from "./components/searchForm";
+import ResultsList from "./components/resultsList";
+import SearchForm from "./components/searchForm";
 
 class App extends React.Component {
   state = {
@@ -63,18 +63,18 @@ class App extends React.Component {
   };
 
   render() {
-    let Display;
+    let toDisplay;
 
     if (this.state.filteredEmployees) {
-      Display = this.state.filteredEmployees;
+      toDisplay = this.state.filteredEmployees;
     } else {
-      Display = this.state.employeeList;
+      toDisplay = this.state.employeeList;
     }
 
     return (
       <>
         <div className="App">
-          <searchForm
+          <SearchForm
             search={this.state.search}
             handleInputChange={this.handleInputChange}
             handleFormSubmit={this.handleFormSubmit}
@@ -83,7 +83,7 @@ class App extends React.Component {
         </div>
 
         <div>
-          <resultsList results={Display} />
+          <ResultsList results={toDisplay} />
         </div>
       </>
     );
