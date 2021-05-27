@@ -12,8 +12,6 @@
 
 ## Screenshots
 
-![Screenshot of working site](public/images/working.jpg)
-
 ![Screenshot of alphabetized results](public/images/aplhabetized.jpg)
 
 ## Description
